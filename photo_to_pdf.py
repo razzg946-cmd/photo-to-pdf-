@@ -6,7 +6,7 @@ import io
 TARGET_SIZE = 2 * 1024 * 1024   
 pdf_filename = "compressed_output.pdf"
 
-st.title("Image to PDF by Raj")
+st.title("Image to Compressed PDF by Raj")
 st.write("Upload an image. If it's small or blurry, the app will upscale it to produce a clear PDF.")
 
 # 1️⃣ Upload image
@@ -54,5 +54,6 @@ if uploaded_file is not None:
         file_name=pdf_filename,
         mime="application/pdf"
     )
+
 
 
