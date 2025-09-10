@@ -22,7 +22,7 @@ if uploaded_file is not None:
         scale = max(min_size / img.width, min_size / img.height)
         new_size = (int(img.width * scale), int(img.height * scale))
         img = img.resize(new_size, Image.LANCZOS)
-        st.info(f"🔍 Image upscaled to {new_size} for clarity.")
+        st.info(f" Image upscaled to {new_size} for clarity.")
 
     # 🔹 Step 2: Save PDF & adjust quality
     quality = 95
@@ -45,13 +45,14 @@ if uploaded_file is not None:
         img.save(buffer, "PDF", quality=95, optimize=True)
         compressed_pdf = buffer.getvalue()
 
-    st.success(f"✅ PDF ready! Final size: {len(compressed_pdf)/1024:.1f} KB")
+    st.success(f" PDF ready! Final size: {len(compressed_pdf)/1024:.1f} KB")
 
     # 3️⃣ Download button
     st.download_button(
-        label="📥 Download PDF",
+        label="Download PDF",
         data=compressed_pdf,
         file_name=pdf_filename,
         mime="application/pdf"
     )
+
 
