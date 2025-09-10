@@ -3,10 +3,10 @@ from PIL import Image
 import io
 
 # 🎯 Target size (1 MB)
-TARGET_SIZE = 1 * 1024 * 1024   
+TARGET_SIZE = 2 * 1024 * 1024   
 pdf_filename = "compressed_output.pdf"
 
-st.title("📄 Image to Compressed PDF (≤1 MB)")
+st.title("Image to Compressed PDF by Raj")
 st.write("Upload an image and download it as a compressed PDF under 1 MB.")
 
 # 1️⃣ Upload image
@@ -46,3 +46,4 @@ if uploaded_file is not None:
         file_name=pdf_filename,
         mime="application/pdf"
     )
+
